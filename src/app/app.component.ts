@@ -31,7 +31,7 @@ import {MatTableDataSource} from "@angular/material/table";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'Moneten';
+  title = 'Moneten!';
 
   readonly states: State[] = STATES;
 

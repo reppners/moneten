@@ -43,7 +43,7 @@
   }
 
   100% {
-    fill: #FFC107;
+    fill: #003399;
   }
 }
 
@@ -53,27 +53,29 @@
   }
 
   100% {
-    fill: #FFC107;
+    fill: #003399;
   }
 }
 
 .svg-elem-1 {
-  -webkit-animation: animate-svg-stroke-1 5s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.3s both,
-  animate-svg-fill-1 5s cubic-bezier(0.47, 0, 0.745, 0.715) 2.5s both;
-  animation: animate-svg-stroke-1 5s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.3s both,
-  animate-svg-fill-1 5s cubic-bezier(0.47, 0, 0.745, 0.715) 2.5s both;
+  animation: animate-svg-stroke-1 5s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.3s alternate both,
+  animate-svg-fill-1 5s cubic-bezier(0.47, 0, 0.745, 0.715) 2s alternate both;
+  //animation-iteration-count: infinite;
 }
 
 @keyframes fadein-text-opacity {
   0% {
     opacity: 0;
+    transform: scale(.7)
   }
 
   100% {
     opacity: 100%;
+    transform: scale(1)
   }
 }
 
 .coming-soon-animation {
-  animation: fadein-text-opacity 6s cubic-bezier(0.47, 0, 0.745, 0.715) 1s both
+  animation: fadein-text-opacity 6s cubic-bezier(0.47, 0, 0.745, 0.715) 1s alternate both;
+  //animation-iteration-count: infinite;
 }
