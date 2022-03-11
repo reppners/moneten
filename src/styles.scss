@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+
+@use '@angular/material' as mat;
+
+$default-typography: mat.define-typography-config(
+  $font-family: 'Roboto Serif',
+);
+
+@include mat.core($default-typography);
+
+$primary-palette: mat.$light-blue-palette;
+$accent-palette: mat.$amber-palette;
+$default-theme: mat.define-light-theme((
+  color: (
+    primary: $primary-palette,
+    accent: $accent-palette,
+  ),
+  typography: $default-typography
+));
+
+@include mat.all-component-themes($default-theme);
+
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Roboto Serif', serif; }
