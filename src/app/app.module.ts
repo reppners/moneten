@@ -29,6 +29,10 @@ import { IncomeComponent } from './income/income.component';
 import { DebtsComponent } from './debts/debts.component';
 import { SavingsComponent } from './savings/savings.component';
 import { SpendingsComponent } from './spendings/spendings.component';
+import { LandingComponent } from './landing/landing.component';
+import {CoreModule} from "./@core/core.module";
+import {SharedModule} from "./@shared/shared.module";
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 registerLocaleData(localeDe);
 
@@ -42,27 +46,15 @@ registerLocaleData(localeDe);
     IncomeComponent,
     DebtsComponent,
     SavingsComponent,
-    SpendingsComponent
+    SpendingsComponent,
+    LandingComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
-    FlexLayoutModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
-    MatTableModule,
-    MatCardModule,
-    MatDividerModule,
-    MatCheckboxModule,
-    MatFormFieldModule,
-    MatSelectModule,
-    FormsModule,
-    MatButtonModule,
-    MatIconModule,
-    MatInputModule,
-    MatMenuModule,
-    MatSliderModule,
-    MatDatepickerModule,
-    MatNativeDateModule
+    SharedModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
