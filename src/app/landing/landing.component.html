@@ -1,8 +1,10 @@
 <div fxFlex
-     fxLayout="row">
+     fxLayout="row"
+     fxLayout.lt-lg="column">
   <div fxFlex="25"
        fxLayout="column"
-       fxLayoutAlign="center center">
+       fxLayoutAlign="center center"
+       class="my-16">
     <iframe width="320"
             height="200"
             src="https://www.youtube.com/embed/6TTNeWhXlQs" title="YouTube video player"
@@ -29,11 +31,15 @@
       </svg>
     </div>
     <h1 class="mat-display-4 coming-soon-animation"
-        style="margin-top: 1rem;">coming soon!</h1>
+        ngClass.lt-md="mat-display-2"
+        ngClass.lt-lg="mat-display-3"
+        ngStyle.lt-md="margin-bottom: 0;"
+    style="margin-top: 1rem;">coming soon!</h1>
   </div>
   <div fxFlex="25"
        fxLayout="column"
-       fxLayoutAlign="center center">
+       fxLayoutAlign="center center"
+       ngClass.lt-md="mat-display-2">
     <iframe width="320"
             height="200"
             src="https://www.youtube.com/embed/yKMceCBzYdg" title="YouTube video player"
