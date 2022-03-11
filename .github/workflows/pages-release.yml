@@ -1,6 +1,9 @@
 ---
-name: Release via gh-pages
-on: [ page_build ]
+name: Build and deploy to gh-pages
+on:
+  push:
+    branches:
+      - publish
 jobs:
   release-build:
     runs-on: ubuntu-latest
@@ -20,8 +23,10 @@ jobs:
       - run: echo "🖥️ The workflow is now ready to build the site on the runner."
       - name: Build
         run: npm run build:pages
-      - uses: EndBug/add-and-commit@v8
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/publish' }}
         with:
-          add: 'docs'
-          default_author: github_actions
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
       - run: echo "🍏 This job's status is ${{ job.status }}."
